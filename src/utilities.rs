@@ -192,6 +192,8 @@ pub(crate) fn upgrade_self() -> Result<String, Box<dyn std::error::Error>> {
 		const EXPECTED_END: &str = "linux";
 		#[cfg(target_os = "macos")]
 		const EXPECTED_END: &str = "macos";
+		#[cfg(target_os = "android")]
+		const EXPECTED_END: &str = "android";
 
 		let mut required_binary = None;
 		let mut version_name = None;
